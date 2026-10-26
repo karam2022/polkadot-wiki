@@ -33,9 +33,11 @@ The outflow is determined by the following mechanisms:
   so nothing is burned. It was set to zero by referendum
   [1781](https://polkadot.subsquare.io/referenda/1781) ("Preserve DOT Treasury from Burn").
 - **Treasury spends & Bounties:** they make up the largest share of outflow to the community and
-  need to be approved by governance on one of the [treasury tracks](#treasury-tracks). An approved
-  spend does not wait for the end of a spend period: it becomes claimable from the block set in the
-  proposal (immediately, or later for milestone-based spends), and anyone can trigger the payout.
+  need to be approved by governance on one of the [treasury tracks](#treasury-tracks). Spends made
+  with `spend_local` (DOT only) are paid at the end of the current
+  [spend period](../general/glossary.md#spend-period). Spends made with `spend` (DOT or an approved
+  asset such as USDT or USDC) do not wait: they become claimable from the block set in the proposal
+  (immediately, or later for milestone-based spends), and anyone can trigger the payout.
   A spend that is not claimed within
   {{ rpc("polkadot-assethub", "Treasury", "PayoutPeriod", 1296000, is_constant=true, readable="blocks_to_days") }}
   days of becoming claimable expires.
