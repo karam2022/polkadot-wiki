@@ -264,11 +264,10 @@ code or movement of funds. The governance system is on-chain and revolves around
 ## Governance Council
 
 **Not applicable to OpenGov.** The Council was removed from Polkadot and Kusama when Governance V1
-was replaced by [OpenGov](../learn/learn-polkadot-opengov.md). Under Governance V1 it was an on-chain
-entity that consisted of several on-chain accounts (starting at 6, eventually moving to the final
-value of 24). The Council can act as a representative for "passive" (non-voting)
-stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder
-group to vote on and cancelling malicious referenda.
+was replaced by [OpenGov](../learn/learn-polkadot-opengov.md). Under Governance V1 it was an elected on-chain
+body of several accounts that represented "passive" (non-voting) stakeholders. Its two main tasks
+were proposing referenda for the overall stakeholder group to vote on and cancelling malicious
+referenda.
 
 ## GRANDPA Finality Gadget
 
@@ -631,11 +630,12 @@ software.
 
 ## Spend Period
 
-The period at the end of which the treasury pays out approved `spend_local` spends (DOT only) and
-applies its burn factor (currently 0% on Polkadot); see the
-[current spend period](./chain-state-values.md). Spends made with `spend` (DOT or any approved
-asset, such as USDT) do not wait for the end of a spend period: they become claimable from the block
-set in the proposal and expire if not claimed within the payout period.
+The period at the end of which the treasury processes approved `spend_local` spends (native token
+only: DOT on Polkadot, KSM on Kusama), paying them when enough funds are available, and applies its
+burn factor (currently 0% on Polkadot); see the [current spend period](./chain-state-values.md).
+Spends made with `spend` (the native token or an approved asset, such as USDT) do not wait for the
+end of a spend period: they can be paid out from their `valid_from` block and expire if the payout
+is not started within the payout period.
 
 ## Staking
 

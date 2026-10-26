@@ -220,10 +220,11 @@ plutocratic tendency. One of these mechanisms is called conviction voting, and i
 power to token holders who are willing to lock their tokens on the protocol for longer lengths of
 time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly
 determined minority to overrule the vote of an apathetic majority in certain situations. OpenGov
-also measures two things for every referendum: approval (the conviction-weighted share of Aye votes)
-and support (the share of all issuance that voted Aye, ignoring conviction). Each track sets curves
-for both, so a referendum with more privileges needs much broader participation, not only a
-majority of the votes cast. Voters can also [delegate](../learn/learn-polkadot-opengov.md#multirole-delegation)
+also measures two things for every referendum: approval (conviction-weighted Aye votes as a share
+of all conviction-weighted Aye and Nay votes) and support (Aye and Abstain tokens, ignoring
+conviction, as a share of active issuance). Each track sets its own time-varying requirements for
+both, so passing a referendum takes enough tokens taking part, not only a majority of the votes
+cast. Voters can also [delegate](../learn/learn-polkadot-opengov.md#multirole-delegation)
 their voting power per track to people they trust. (Adaptive Quorum Biasing belonged to Governance
 V1 and is no longer used.) For
 details on the subtleties of Polkadot's governance system, please see the
