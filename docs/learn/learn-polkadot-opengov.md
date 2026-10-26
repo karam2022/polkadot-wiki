@@ -90,9 +90,10 @@ so as often as they wish. [**Origins and Tracks**](#origins-and-tracks) help fac
 
 A referendum can involve up to three deposits:
 
-- **Preimage deposit:** if you store the proposal's call on chain as a separate preimage, you hold a
-  deposit that grows with the size of the call. On Polkadot Asset Hub it is about 0.4 DOT for a
-  typical treasury spend. Short calls can instead be included inline in the referendum, with no
+- **Preimage deposit:** if you store the proposal's call on chain as a separate preimage that has
+  not already been requested, you hold a deposit that grows with the size of the call. On Polkadot
+  Asset Hub it is about 0.4 DOT for a typical treasury spend. A preimage that has already been
+  requested can be stored without a deposit. Short calls can instead be included inline in the referendum, with no
   separate preimage. You get the deposit back by calling `preimage.unnotePreimage`.
 - **Submission deposit:** submitting the referendum itself requires
   {{ rpc("polkadot-assethub", "Referenda", "SubmissionDeposit", 100000000000, is_constant=true, readable="human_readable") }}
