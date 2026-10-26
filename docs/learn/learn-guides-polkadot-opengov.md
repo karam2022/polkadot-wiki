@@ -300,7 +300,7 @@ This call will cancel the referendum and return the deposit. You can also kill a
 the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
 
 !!!info "Preimage Submission Deposit"
-    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. Since governance moved to Asset Hub, the deposit for a preimage with a treasury spend transaction is about 0.4 DOT on Polkadot (about 0.013 KSM on Kusama). Ensure you have enough account balance to pay for this submission deposit as well as the transaction fees.
+    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. Since governance moved to Asset Hub, the deposit for a preimage with a treasury spend transaction is about 0.4 DOT on Polkadot (about 0.013 KSM on Kusama). Ensure you have enough account balance to pay for this preimage deposit as well as the transaction fees.
 
 Once a preimage is submitted, it can be checked under
 [Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages).

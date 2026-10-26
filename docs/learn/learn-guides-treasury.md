@@ -158,7 +158,7 @@ The following tutorial mostly goes over how to utilize the `spend` extrinsic, wh
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a transaction
 that requests 100 USDT from AssetHub.
 
-- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages)
+- Navigate to [Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages)
   and then click on Add Preimage.
 - Select the account to submit the preimage.
 - Choose the `treasury` pallet in the "propose" dropdown and the
