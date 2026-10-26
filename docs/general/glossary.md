@@ -153,8 +153,9 @@ good".
 
 ## Community Queue
 
-The queue for proposals originating from individual accounts (i.e. not the Council) which are
-waiting to become referenda. Compare the External queue.
+**Not applicable to OpenGov.** The queue for proposals originating from individual accounts (i.e.
+not the Council) which were waiting to become referenda under Governance V1. Compare the External
+queue.
 
 ## Consensus
 
@@ -262,8 +263,10 @@ code or movement of funds. The governance system is on-chain and revolves around
 
 ## Governance Council
 
-An on-chain entity that consists of several on-chain accounts (starting at 6, eventually moving to
-the final value of 24). The Council can act as a representative for "passive" (non-voting)
+**Not applicable to OpenGov.** The Council was removed from Polkadot and Kusama when Governance V1
+was replaced by [OpenGov](../learn/learn-polkadot-opengov.md). Under Governance V1 it was an on-chain
+entity that consisted of several on-chain accounts (starting at 6, eventually moving to the final
+value of 24). The Council can act as a representative for "passive" (non-voting)
 stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder
 group to vote on and cancelling malicious referenda.
 
@@ -369,7 +372,8 @@ Data that includes information about other data, such as information about a spe
 
 ## Motion
 
-A motion is essentially a "referendum" or "decision" being considered by the Council. The Council
+**Not applicable to OpenGov.** Under Governance V1, a motion was a "referendum" or "decision"
+being considered by the Council. The Council
 can vote on motions like approving Treasury Proposals or making proposals for the community to vote
 on.
 
@@ -525,8 +529,9 @@ protocol, most prominently in [BABE](#babe), the block production mechanism.
 
 ## Referendum
 
-A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by
-the Governance Council, by a member of the public, or as the result of a previous proposal.
+A vote on whether or not a proposal should be accepted by the network. In OpenGov, any account can
+submit a referendum on the [track](../learn/learn-polkadot-opengov-origins.md#origins-and-tracks-info)
+whose origin has the privileges the proposal needs.
 Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held)
 and the amount of time they are willing to lock their tokens.
 
@@ -626,9 +631,11 @@ software.
 
 ## Spend Period
 
-Successfully enacted Treasury track referenda will get funded at the end of the
-[spending period](./chain-state-values.md). Treasury funds are directly
-sent to the beneficiary account at the end of the spend period.
+The period at the end of which the treasury applies its burn factor (currently 0% on Polkadot) and
+funds any remaining legacy approvals; see the [current spend period](./chain-state-values.md).
+Spends approved through OpenGov treasury tracks do not wait for the end of a spend period: they
+become claimable from the block set in the proposal and expire if not claimed within the payout
+period.
 
 ## Staking
 
