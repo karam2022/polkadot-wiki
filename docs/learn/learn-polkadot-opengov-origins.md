@@ -57,18 +57,18 @@ than the min enactment period.
 ## Origins and Tracks Info
 
 Polkadot has 18 tracks and Kusama has 16. Both run on their Asset Hub. The values below were read
-from the chains' `referenda.tracks` constant (Polkadot Asset Hub runtime 2,005,000 and Kusama Asset
+from the chains' `referenda.tracks` constant (Polkadot Asset Hub runtime 2,005,001 and Kusama Asset
 Hub runtime 2,003,002, checked 26 October 2026). Durations assume 6-second blocks, because
 governance on Asset Hub is timed in relay chain blocks. For live values, see the track pages on
 [Subsquare](https://polkadot.subsquare.io/referenda) or query
 `referenda.tracks` in the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/chainstate/constants).
 
-!!!info "What changed since the earlier version of this table"
+!!!info "Polkadot: what changed since the earlier version of this table"
     [Wish For Change 1701](https://polkadot.subsquare.io/referenda/1701) ("OpenGov Adjustments -
     2025") led to a runtime change
     ([polkadot-fellows/runtimes#873](https://github.com/polkadot-fellows/runtimes/pull/873)) that:
 
-    - raised the submission deposit and shortened the undeciding timeout on all tracks;
+    - raised the submission deposit and shortened the undeciding timeout on all Polkadot tracks;
     - Treasurer: max deciding 10 → 2, decision deposit 1,000 → 25,000 DOT, minimum support 0% → 1%;
     - Small Spender: max deciding 50 → 5, decision deposit 100 → 500 DOT, minimum support 0% → 0.5%;
     - Medium Spender: max deciding 50 → 5, decision deposit 200 → 1,000 DOT, minimum support 0% → 0.5%;
@@ -156,7 +156,7 @@ governance on Asset Hub is timed in relay chain blocks. For live values, see the
 
     The origin with the highest level of privileges. This track requires extremely high levels of
     approval and support for early passing. The prepare and enactment periods are also large. For
-    instance, a referendum proposed in this track needs to amass 48.2% support (total network issuance)
+    instance, a referendum proposed in this track needs to amass 48.2% support (share of active issuance)
     by the end of the first day with over 93.5% approval to be considered to be part of the confirm
     period. The support curve drops linearly to 25% by the end of day 14 and almost to 0% by the end of
     day 28. This ensures that the token holders receive ample time to vote on the proposal during the
@@ -168,7 +168,7 @@ governance on Asset Hub is timed in relay chain blocks. For live values, see the
 
     The origin with the highest level of privileges. This track requires extremely high levels of
     approval and support for early passing. The prepare and enactment periods are also large. For
-    instance, a referendum proposed in this track needs to amass 46.4% support (total network issuance)
+    instance, a referendum proposed in this track needs to amass 46.4% support (share of active issuance)
     by the end of the first day with over 88.2% approval to be considered to be part of the confirm
     period. The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of
     day 14. This ensures that the token holders receive ample time to vote on the proposal during the
