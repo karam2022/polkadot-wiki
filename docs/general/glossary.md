@@ -631,11 +631,11 @@ software.
 
 ## Spend Period
 
-The period at the end of which the treasury applies its burn factor (currently 0% on Polkadot) and
-funds any remaining legacy approvals; see the [current spend period](./chain-state-values.md).
-Spends approved through OpenGov treasury tracks do not wait for the end of a spend period: they
-become claimable from the block set in the proposal and expire if not claimed within the payout
-period.
+The period at the end of which the treasury pays out approved `spend_local` spends (DOT only) and
+applies its burn factor (currently 0% on Polkadot); see the
+[current spend period](./chain-state-values.md). Spends made with `spend` (DOT or any approved
+asset, such as USDT) do not wait for the end of a spend period: they become claimable from the block
+set in the proposal and expire if not claimed within the payout period.
 
 ## Staking
 
