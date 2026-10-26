@@ -30,17 +30,20 @@ The outflow is determined by the following mechanisms:
 - **Burned tokens:** the treasury has a burn factor that applies at the end of each spend period.
   On Polkadot it is currently
   {{ rpc("polkadot-assethub", "Treasury", "Burn", 0, is_constant=true, readable="percentage") }},
-  so nothing is burned. It was set to zero by referendum
+  so nothing is burned. The burn was removed by a runtime upgrade
+  ([polkadot-fellows/runtimes#1028](https://github.com/polkadot-fellows/runtimes/pull/1028), December
+  2025) following Wish For Change referendum
   [1781](https://polkadot.subsquare.io/referenda/1781) ("Preserve DOT Treasury from Burn").
-- **Treasury spends & Bounties:** they make up the largest share of outflow to the community and
-  need to be approved by governance on one of the [treasury tracks](#treasury-tracks). Spends made
-  with `spend_local` (DOT only) are paid at the end of the current
-  [spend period](../general/glossary.md#spend-period). Spends made with `spend` (DOT or an approved
-  asset such as USDT or USDC) do not wait: they become claimable from the block set in the proposal
-  (immediately, or later for milestone-based spends), and anyone can trigger the payout.
-  A spend that is not claimed within
+- **Treasury spends & Bounties:** they need to be approved by governance on one of the
+  [treasury tracks](#treasury-tracks). Spends made with `spend_local` (DOT only) are processed at
+  the end of a [spend period](../general/glossary.md#spend-period) and paid when the treasury has
+  enough available funds; otherwise they wait for a later spend period. Spends made with `spend`
+  (DOT or an approved asset such as USDT or USDC) do not wait for a spend period: each one has a
+  `valid_from` block (the enactment block if not set, or later for milestone-based spends), and
+  anyone can trigger the payout from that block onwards. The payout must be started within
   {{ rpc("polkadot-assethub", "Treasury", "PayoutPeriod", 1296000, is_constant=true, readable="blocks_to_days") }}
-  days of becoming claimable expires.
+  days of `valid_from`, otherwise the spend expires. Because `valid_from` can be set in the past,
+  a newly approved spend may have less time left than that.
 - **Tips:** small payouts approved through the Small Tipper and Big Tipper tracks. The separate
   tipping mechanism from Governance V1 no longer exists.
 
