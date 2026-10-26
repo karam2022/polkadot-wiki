@@ -98,9 +98,9 @@ Three different deposits are involved in a referendum:
   on Polkadot, the same for every track. It is refundable only if the referendum is approved or
   cancelled. It is not returned if the referendum is rejected, times out or is killed.
 - **Decision deposit:** an origin-dependent deposit needed to enter the decision period (see below and
-  the [track table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info)). It can be anyone's,
-  not only the proposer's, and it is refundable once the referendum is approved, rejected, timed out or
-  cancelled. It is lost only if the referendum is killed.
+  the [track table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info)). Anyone can place
+  it, not only the proposer. It is refundable once the referendum is approved, rejected, timed out or
+  cancelled, and it is lost only if the referendum is killed.
 
 See how you can claim back your deposits [here](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits).
 
