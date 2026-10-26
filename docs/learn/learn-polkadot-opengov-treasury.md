@@ -27,14 +27,20 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spend period,
-  **[a fraction](../general/chain-state-values.md) of the available funds are
-  burned**.
-- **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
-  community and need to be approved by governance. Then, payouts occur at the end of a
-  [spend period](../general/glossary.md#spend-period).
-- **Tips:** smaller payouts directly to grantees that can happen within a
-  [spend period](../general/glossary.md#spend-period).
+- **Burned tokens:** the treasury has a burn factor that applies at the end of each spend period.
+  On Polkadot it is currently
+  {{ rpc("polkadot-assethub", "Treasury", "Burn", 0, is_constant=true, readable="percentage") }},
+  so nothing is burned. It was set to zero by referendum
+  [1781](https://polkadot.subsquare.io/referenda/1781) ("Preserve DOT Treasury from Burn").
+- **Treasury spends & Bounties:** they make up the largest share of outflow to the community and
+  need to be approved by governance on one of the [treasury tracks](#treasury-tracks). An approved
+  spend does not wait for the end of a spend period: it becomes claimable from the block set in the
+  proposal (immediately, or later for milestone-based spends), and anyone can trigger the payout.
+  A spend that is not claimed within
+  {{ rpc("polkadot-assethub", "Treasury", "PayoutPeriod", 1296000, is_constant=true, readable="blocks_to_days") }}
+  days of becoming claimable expires.
+- **Tips:** small payouts approved through the Small Tipper and Big Tipper tracks. The separate
+  tipping mechanism from Governance V1 no longer exists.
 
 !!!info "Spend Period Schedule"
     On Polkadot Developer Interface, navigate to Governance > Treasury to view the status of current [spend period](../general/glossary.md#spend-period).
@@ -73,7 +79,9 @@ track. Then,
 
 ## Sub-treasuries
 
-The treasury currently operates on a single account on-chain. The above tracks manage the outflow of
+The Polkadot treasury holds its funds in a single account on Polkadot Asset Hub, in DOT and in
+approved assets such as USDT and USDC. The Technical Fellowship has its own treasury on the
+Collectives chain. The above tracks manage the outflow of
 the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each
 [collective](./learn-system-chains.md#collectives) is also possible.
 
