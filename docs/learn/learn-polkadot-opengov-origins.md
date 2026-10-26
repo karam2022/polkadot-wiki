@@ -56,17 +56,10 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
-Polkadot has 18 tracks and Kusama has 16. Both run on their Asset Hub. The values below were read
-from the chains' `referenda.tracks` constant (Polkadot Asset Hub runtime 2,005,001 and Kusama Asset
-Hub runtime 2,003,002, checked 26 October 2026). Durations assume 6-second blocks, because
-governance on Asset Hub is timed in relay chain blocks. For live values, see the track pages on
-[Subsquare](https://polkadot.subsquare.io/referenda) or query
-`referenda.tracks` in the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/chainstate/constants).
+Polkadot has 18 tracks and Kusama has 16. Both run on their Asset Hub. The values below were read from the chains' `referenda.tracks` constant (Polkadot Asset Hub runtime 2,005,001 and Kusama Asset Hub runtime 2,003,002, checked 26 October 2026). Durations assume 6-second blocks, because governance on Asset Hub is timed in relay chain blocks. For live values, see the track pages on [Subsquare](https://polkadot.subsquare.io/referenda) or query `referenda.tracks` in the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/chainstate/constants).
 
 !!!info "Polkadot: what changed since the earlier version of this table"
-    [Wish For Change 1701](https://polkadot.subsquare.io/referenda/1701) ("OpenGov Adjustments -
-    2025") led to a runtime change
-    ([polkadot-fellows/runtimes#873](https://github.com/polkadot-fellows/runtimes/pull/873)) that:
+    [Wish For Change 1701](https://polkadot.subsquare.io/referenda/1701) ("OpenGov Adjustments - 2025") led to a runtime change ([polkadot-fellows/runtimes#873](https://github.com/polkadot-fellows/runtimes/pull/873)) that:
 
     - raised the submission deposit and shortened the undeciding timeout on all Polkadot tracks;
     - Treasurer: max deciding 10 → 2, decision deposit 1,000 → 25,000 DOT, minimum support 0% → 1%;
@@ -75,8 +68,7 @@ governance on Asset Hub is timed in relay chain blocks. For live values, see the
     - Big Spender: max deciding 50 → 3, decision deposit 400 → 5,000 DOT, minimum support 0% → 0.75%;
     - Referendum Canceller: max deciding 1,000 → 500, decision deposit 10,000 → 5,000 DOT.
 
-    The Technical Maintenance and Prosperity Emergency tracks were added in September 2026
-    ([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
+    The Technical Maintenance and Prosperity Emergency tracks were added in September 2026 ([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
 
 === "Polkadot"
     | ID  | Origin | Max Deciding | Decision Deposit | Prepare Period | Decision Period | Confirm Period | Min Enactment Period | Min Approval | Min Support |
@@ -154,25 +146,13 @@ governance on Asset Hub is timed in relay chain blocks. For live values, see the
 
 === "Polkadot"
 
-    The origin with the highest level of privileges. This track requires extremely high levels of
-    approval and support for early passing. The prepare and enactment periods are also large. For
-    instance, a referendum proposed in this track needs to amass 48.2% support (share of active issuance)
-    by the end of the first day with over 93.5% approval to be considered to be part of the confirm
-    period. The support curve drops linearly to 25% by the end of day 14 and almost to 0% by the end of
-    day 28. This ensures that the token holders receive ample time to vote on the proposal during the
-    decision period.
+    The origin with the highest level of privileges. This track requires extremely high levels of approval and support for early passing. The prepare and enactment periods are also large. For instance, a referendum proposed in this track needs to amass 48.2% support (share of active issuance) by the end of the first day with over 93.5% approval to be considered to be part of the confirm period. The support curve drops linearly to 25% by the end of day 14 and almost to 0% by the end of day 28. This ensures that the token holders receive ample time to vote on the proposal during the decision period.
 
      ![](./../assets/polkadot-opengov-origins/root_origin_polkadot.png)
 
 === "Kusama"
 
-    The origin with the highest level of privileges. This track requires extremely high levels of
-    approval and support for early passing. The prepare and enactment periods are also large. For
-    instance, a referendum proposed in this track needs to amass 46.4% support (share of active issuance)
-    by the end of the first day with over 88.2% approval to be considered to be part of the confirm
-    period. The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of
-    day 14. This ensures that the token holders receive ample time to vote on the proposal during the
-    decision period.
+    The origin with the highest level of privileges. This track requires extremely high levels of approval and support for early passing. The prepare and enactment periods are also large. For instance, a referendum proposed in this track needs to amass 46.4% support (share of active issuance) by the end of the first day with over 88.2% approval to be considered to be part of the confirm period. The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of day 14. This ensures that the token holders receive ample time to vote on the proposal during the decision period.
 
      ![](./../assets/polkadot-opengov-origins/root_origin_kusama.png)
 
@@ -180,25 +160,13 @@ governance on Asset Hub is timed in relay chain blocks. For live values, see the
 
 === "Polkadot"
 
-    Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md): the
-    Fellowship whitelists the hash of a call, and the call can then be dispatched with the Root
-    origin after the referendum passes. This track allows for a shorter voting turnaround, safe in the knowledge through an open
-    and transparent process for time-critical proposals. For instance, a referendum proposed in this
-    track needs to amass 20% support (much less than Root) by the end of the first day with over
-    94.2% approval to be considered to be part of the confirm period. **Note how no referendum
-    on the Whitelisted track can ever pass with less than 5% support.**
+    Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md): the Fellowship whitelists the hash of a call, and the call can then be dispatched with the Root origin after the referendum passes. This track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent process for time-critical proposals. For instance, a referendum proposed in this track needs to amass 20% support (much less than Root) by the end of the first day with over 94.2% approval to be considered to be part of the confirm period. **Note how no referendum on the Whitelisted track can ever pass with less than 5% support.**
 
     ![](./../assets/polkadot-opengov-origins/whitelisted_caller_polkadot.png)
 
 === "Kusama"
 
-    Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md): the
-    Fellowship whitelists the hash of a call, and the call can then be dispatched with the Root
-    origin after the referendum passes. This track allows for a shorter voting turnaround, safe in the knowledge through an open
-    and transparent process for time-critical proposals. For instance, a referendum proposed in this
-    track needs to amass 13.7% support (much less than Root) by the end of the first day with over
-    89.2% approval to be considered to be part of the confirm period. **Note how no referendum on the
-    Whitelisted track can ever pass with less than 5% support.**
+    Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md): the Fellowship whitelists the hash of a call, and the call can then be dispatched with the Root origin after the referendum passes. This track allows for a shorter voting turnaround, safe in the knowledge through an open and transparent process for time-critical proposals. For instance, a referendum proposed in this track needs to amass 13.7% support (much less than Root) by the end of the first day with over 89.2% approval to be considered to be part of the confirm period. **Note how no referendum on the Whitelisted track can ever pass with less than 5% support.**
 
     ![](./../assets/polkadot-opengov-origins/whitelisted_caller_kusama.png)
 
@@ -238,10 +206,7 @@ calls from the staking pallet and the Election Provider Multiphase Pallet.
 
 === "Polkadot"
 
-    The origin for spending funds from the treasury (up to 10M DOT). This origin has the privilege to
-    execute calls from the Treasury pallet, and it is also the origin that sets and updates asset
-    conversion rates in the Asset Rate pallet. Only two Treasurer referenda can be in their decision
-    period at the same time.
+    The origin for spending funds from the treasury (up to 10M DOT). This origin has the privilege to execute calls from the Treasury pallet, and it is also the origin that sets and updates asset conversion rates in the Asset Rate pallet. Only two Treasurer referenda can be in their decision period at the same time.
 
     ![](./../assets/polkadot-opengov-origins/treasurer_polkadot.png)
 
@@ -290,22 +255,11 @@ The origin managing the registrar and permissioned HRMP channel operations.
 
 ### Technical Maintenance
 
-Polkadot only. The origin for technical maintenance of operational values across system pallets:
-quotas, allowances, limits, durations, anti-spam fees and similar settings. According to the
-runtime, changes on this track move no funds, set no monetary or market policy and do not change who
-controls what. It uses the same approval curve as Whitelisted Caller. Support starts at 50%, falls to
-6% by the end of day 3 and never goes below 5%. The track was added in September 2026
-([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
+Polkadot only. The origin for technical maintenance of operational values across system pallets: quotas, allowances, limits, durations, anti-spam fees and similar settings. According to the runtime, changes on this track move no funds, set no monetary or market policy and do not change who controls what. It uses the same approval curve as Whitelisted Caller. Support starts at 50%, falls to 6% by the end of day 3 and never goes below 5%. The track was added in September 2026 ([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
 
 ### Prosperity Emergency
 
-Polkadot only. The origin intended to guard the monetary mechanisms around Prosperity (such as the
-PSM and related financial parameters) once they are wired to it, for example to operate circuit
-breakers like pausing the minting of a stable asset while keeping redemptions open. Wider
-administrative powers stay on stricter tracks until governance deliberately moves them here. It uses
-the same approval and support curves as Whitelisted Caller, with a 50,000 DOT decision deposit and a
-3-hour confirm period. The track was added in September 2026
-([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
+Polkadot only. The origin intended to guard the monetary mechanisms around Prosperity (such as the PSM and related financial parameters) once they are wired to it, for example to operate circuit breakers like pausing the minting of a stable asset while keeping redemptions open. Wider administrative powers stay on stricter tracks until governance deliberately moves them here. It uses the same approval and support curves as Whitelisted Caller, with a 50,000 DOT decision deposit and a 3-hour confirm period. The track was added in September 2026 ([polkadot-fellows/runtimes#1236](https://github.com/polkadot-fellows/runtimes/pull/1236)).
 
 ### Referendum Canceller
 
